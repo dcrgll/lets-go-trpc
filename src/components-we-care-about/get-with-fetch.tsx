@@ -1,7 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { type Post } from '@prisma/client'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 
 import { toast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -52,6 +54,7 @@ export default function GetWithFetch() {
       <CardHeader>
         <CardTitle>Good ol&apos; fetch</CardTitle>
       </CardHeader>
+
       <CardContent>
         <PostTable posts={posts} />
       </CardContent>
@@ -69,6 +72,12 @@ export default function GetWithFetch() {
           </Button>
         )}
       </CardFooter>
+      <Link
+        href="https://github.com/dcrgll/lets-go-trpc/blob/main/src/components-we-care-about/get-with-fetch.tsx"
+        target="_blank"
+      >
+        <GitHubLogoIcon className="mb-2 ml-2 hover:text-orange-400" />
+      </Link>
     </Card>
   )
 }

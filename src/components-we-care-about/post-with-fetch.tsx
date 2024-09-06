@@ -1,6 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import { type FormSchema } from '@/types'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { type z } from 'zod'
 
 import {
@@ -37,6 +39,12 @@ export default function PostWithFetch() {
       <CardContent>
         <BasicForm handleSubmit={handleSubmit} />
       </CardContent>
+      <Link
+        href="https://github.com/dcrgll/lets-go-trpc/blob/main/src/components-we-care-about/post-with-fetch.tsx"
+        target="_blank"
+      >
+        <GitHubLogoIcon className="mb-2 ml-2 hover:text-orange-400" />
+      </Link>
     </Card>
   )
 }

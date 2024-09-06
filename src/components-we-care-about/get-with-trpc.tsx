@@ -1,6 +1,8 @@
 'use client'
 
+import Link from 'next/link'
 import { api } from '@/trpc/react'
+import { GitHubLogoIcon } from '@radix-ui/react-icons'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -39,6 +41,12 @@ export default function GetWithTRPC() {
           </Button>
         )}
       </CardFooter>
+      <Link
+        href="https://github.com/dcrgll/lets-go-trpc/blob/main/src/components-we-care-about/get-with-trpc.tsx"
+        target="_blank"
+      >
+        <GitHubLogoIcon className="mb-2 ml-2 hover:text-orange-400" />
+      </Link>
     </Card>
   )
 }
