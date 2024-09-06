@@ -9,6 +9,8 @@
 
 ## How to run?
 
+change `env.example` to `.env` and then...
+
 ```bash
   bun install
   bun run db:push
